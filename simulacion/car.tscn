@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfig7rkiiwuxb"]
+
+[ext_resource type="PackedScene" uid="uid://djvia6l5ro1ge" path="res://car/CAR.glb" id="1_s54kk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvo7x"]
+size = Vector3(5, 6, 12)
+
+[node name="CAR" instance=ExtResource("1_s54kk")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.5)
+shape = SubResource("BoxShape3D_qvo7x")

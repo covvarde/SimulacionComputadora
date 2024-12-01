@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://ph545t6youn1"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_biihw"]
+[ext_resource type="PackedScene" uid="uid://3xwfqydvlprp" path="res://Bicycle.glb" id="2_ehydr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tync2"]
+radius = 1.0
+height = 6.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_honoq"]
+radius = 1.0
+height = 6.0
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_biihw")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Bicycle" parent="Pivot" instance=ExtResource("2_ehydr")]
+unique_name_in_owner = true
+transform = Transform3D(-10, 0, -8.74228e-07, 0, 10, 0, 8.74228e-07, 0, -10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, -3.49691e-08, 0.8, 0, -0.8, -3.49691e-08, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_tync2")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 3.96593, 7.25882)
+
+[node name="Collision" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_honoq")
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

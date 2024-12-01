@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cftg5kdnrfpk"
+path.s3tc="res://.godot/imported/plaza patria_panel_albedo.jpg-c941550895b7799c8440e6acb4626ccb.s3tc.ctex"
+path.etc2="res://.godot/imported/plaza patria_panel_albedo.jpg-c941550895b7799c8440e6acb4626ccb.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d40c1c9076cb7637bb7afe5d6db5c295"
+}
+
+[deps]
+
+source_file="res://EDIFICIO/plaza patria_panel_albedo.jpg"
+dest_files=["res://.godot/imported/plaza patria_panel_albedo.jpg-c941550895b7799c8440e6acb4626ccb.s3tc.ctex", "res://.godot/imported/plaza patria_panel_albedo.jpg-c941550895b7799c8440e6acb4626ccb.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
